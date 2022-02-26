@@ -1,0 +1,273 @@
+26-02-2022 17:39:50.351: (node:333166) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+26-02-2022 17:39:53.923: (node:333226) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+26-02-2022 17:39:57.612: (node:333237) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+26-02-2022 17:40:01.456: (node:333304) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+26-02-2022 17:40:04.847: (node:333378) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+26-02-2022 17:40:08.467: (node:333441) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+26-02-2022 17:40:12.025: (node:333464) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+26-02-2022 17:40:15.520: (node:333475) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+26-02-2022 17:40:19.377: (node:333486) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+26-02-2022 17:40:23.205: (node:333497) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+26-02-2022 17:40:27.023: (node:333509) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+26-02-2022 17:40:30.931: (node:333520) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+26-02-2022 17:40:34.853: (node:333554) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+26-02-2022 17:40:38.547: (node:333655) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+26-02-2022 17:40:42.453: (node:333749) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+/usr/bin/bash:1
+ELF
+^
+
+SyntaxError: Invalid or unexpected token
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1031:15)
+    at Module._compile (node:internal/modules/cjs/loader:1065:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at /usr/lib/node_modules/pm2/lib/ProcessContainer.js:303:25
+    at wrapper (/usr/lib/node_modules/pm2/node_modules/async/internal/once.js:12:16)
+    at next (/usr/lib/node_modules/pm2/node_modules/async/waterfall.js:96:20)
+    at /usr/lib/node_modules/pm2/node_modules/async/internal/onlyOnce.js:12:16
+26-02-2022 17:41:53.641: (node:334502) [DEP0148] DeprecationWarning: Use of deprecated folder mapping "./" in the "exports" field module resolution of the package at /home/aiden/ipmon/node_modules/react/package.json.
+Update this package.json to use a subpath pattern like "./*".
+(Use `node --trace-deprecation ...` to show where the warning was created)

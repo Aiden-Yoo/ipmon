@@ -1,0 +1,47 @@
+{
+  "name": "aiden-market",
+  "private": true,
+  "exports": {
+    ".": "./*"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.17.2",
+    "@heroicons/react": "^1.0.5",
+    "@prisma/client": "^3.9.2",
+    "@tailwindcss/forms": "^0.4.0",
+    "arpscan": "^1.0.2",
+    "cron": "^1.8.2",
+    "iron-session": "^6.0.5",
+    "moment": "^2.29.1",
+    "next": "^12.0.10",
+    "ping": "^0.4.1",
+    "react": "^18.0.0-rc.0",
+    "react-dom": "^18.0.0-rc.0",
+    "react-hook-form": "^7.27.1",
+    "react-table": "^7.7.0",
+    "regenerator-runtime": "^0.13.9",
+    "swr": "^1.2.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "@types/cron": "^1.7.3",
+    "@types/node": "17.0.18",
+    "@types/ping": "^0.4.1",
+    "@types/react": "17.0.39",
+    "@types/react-table": "^7.7.9",
+    "autoprefixer": "^10.4.2",
+    "eslint": "8.9.0",
+    "eslint-config-next": "12.0.10",
+    "postcss": "^8.4.6",
+    "prettier-plugin-prisma": "^3.9.0",
+    "prisma": "^3.9.2",
+    "tailwindcss": "^3.0.23",
+    "typescript": "4.5.5"
+  }
+}
