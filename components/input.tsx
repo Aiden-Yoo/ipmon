@@ -1,4 +1,5 @@
 import type { UseFormRegisterReturn } from "react-hook-form";
+import { cls } from "@libs/client/utils";
 
 interface InputProps {
   label: string;
@@ -7,6 +8,8 @@ interface InputProps {
   type: string;
   register: UseFormRegisterReturn;
   required: boolean;
+  disabled?: boolean;
+  value?: string;
 }
 
 export default function Input({
@@ -16,11 +19,13 @@ export default function Input({
   register,
   type,
   required,
+  disabled,
+  value,
 }: InputProps) {
   return (
     <div>
       <label
-        className="mb-1 block text-sm font-medium text-gray-700"
+        className={cls(`mb-1 block text-sm font-medium text-gray-700`)}
         htmlFor={name}
       >
         {label}
@@ -32,7 +37,13 @@ export default function Input({
             required={required}
             {...register}
             type={type}
-            className="appearance-none w-full px-3 py-1 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-500 focus:border-gray-500"
+            className={cls(
+              `appearance-none w-full px-3 py-1 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-500 focus:border-gray-500 ${
+                disabled ? `bg-slate-200` : ``
+              }`
+            )}
+            disabled={disabled}
+            value={value}
           />
         </div>
       ) : null}

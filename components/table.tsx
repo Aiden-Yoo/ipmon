@@ -124,6 +124,7 @@ export default function Table({ columns, data }: any) {
     {
       columns,
       data,
+      //@ts-ignore
       initialState: { pageSize: 25 },
     },
     useFilters,

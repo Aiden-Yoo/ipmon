@@ -52,6 +52,10 @@ const Home: NextPage = () => {
   });
   const [enter, { data: mutateData, loading }] =
     useMutation<MutationResult>("/api/ips");
+  const [isEdit, setIsEdit] = useState<boolean | undefined>(false);
+  const [id, setId] = useState<number>();
+  const [category, setCategory] = useState<string>();
+  const [ip, setIp] = useState<string>();
   const [ipData, setIpData] = useState<GetPool[]>([]);
   const [summaryData, setSummaryData] = useState<GetSummary[]>([]);
   const {
@@ -67,11 +71,26 @@ const Home: NextPage = () => {
     enter(validForm, "POST");
     reset();
   };
+  const onEditValid = (validForm: SubmitForm) => {
+    if (loading) return;
+    enter({ id, purpose: validForm.purpose }, "PUT");
+    reset();
+    setIsEdit(false);
+  };
   const onInvalid = (errors: FieldErrors) => {
     // console.log(errors);
   };
   const handleDelete = (row: any) => {
     enter({ id: row.row.original.id }, "DELETE");
+  };
+  const handleEdit = (row: any) => {
+    setIsEdit(true);
+    setId(row.row.original.id);
+    setCategory(row.row.original.group);
+    setIp(row.row.original.ip);
+  };
+  const handleCancel = () => {
+    setIsEdit(false);
   };
 
   useEffect(() => {
@@ -129,17 +148,31 @@ const Home: NextPage = () => {
           <div>
             <button
               className={cls(
-                "font-medium text-sm border-b-2 border-transparent hover:text-gray-400 text-gray-500"
+                `font-medium text-sm border-b-2 mr-2 border-transparent   ${
+                  isEdit ? `text-gray-200` : `hover:text-gray-400 text-gray-500`
+                }`
               )}
               onClick={() => handleDelete(row)}
+              disabled={isEdit}
             >
               Delete
+            </button>
+            <button
+              className={cls(
+                `font-medium text-sm border-b-2 mr-2 border-transparent   ${
+                  isEdit ? `text-gray-200` : `hover:text-gray-400 text-gray-500`
+                }`
+              )}
+              onClick={() => handleEdit(row)}
+              disabled={isEdit}
+            >
+              Edit
             </button>
           </div>
         ),
       },
     ],
-    []
+    [isEdit]
   );
   const summaryColumns = useMemo(
     () => [
@@ -172,32 +205,51 @@ const Home: NextPage = () => {
               <h2 className="text-sm font-semibold">Add IP</h2>
               <div className="mt-4 py-6 align-middle inline-block min-w-full px-6 shadow overflow-hidden border-b rounded-lg bg-white">
                 <form
-                  onSubmit={handleSubmit(onValid, onInvalid)}
+                  onSubmit={
+                    !isEdit
+                      ? handleSubmit(onValid, onInvalid)
+                      : handleSubmit(onEditValid, onInvalid)
+                  }
                   className="flex flex-col space-y-4"
                 >
                   <Input
-                    register={register("group", {
-                      required: "Need to input Category",
-                    })}
+                    register={
+                      !isEdit
+                        ? register("group", {
+                            required: "Need to input Category",
+                          })
+                        : register("group", {
+                            required: false,
+                            value: category,
+                          })
+                    }
                     name="group"
                     label="Category"
                     type="text"
-                    required
+                    required={!isEdit!}
+                    disabled={isEdit}
+                    value={isEdit ? category : undefined}
                   />
                   {errors.group?.message}
                   <Input
-                    register={register("ip", {
-                      required: "Need to input IP",
-                      pattern: {
-                        value:
-                          /(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])/,
-                        message: "ex) 1.1.1.1 or 2.2.2.2-5",
-                      },
-                    })}
+                    register={
+                      !isEdit
+                        ? register("ip", {
+                            required: "Need to input IP",
+                            pattern: {
+                              value:
+                                /(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])/,
+                              message: "ex) 1.1.1.1 or 2.2.2.2-5",
+                            },
+                          })
+                        : register("ip", { required: false, value: ip })
+                    }
                     name="ip"
                     label="IP"
                     type="text"
-                    required
+                    required={!isEdit!}
+                    disabled={isEdit}
+                    value={isEdit ? ip : undefined}
                   />
                   {errors.ip?.message}
                   <Input
@@ -207,13 +259,25 @@ const Home: NextPage = () => {
                     type="text"
                     required={false}
                   />
-                  <button
-                    className={cls(
-                      "font-medium text-sm border-b-2 border-transparent hover:text-gray-400 text-gray-500"
-                    )}
-                  >
-                    Submit
-                  </button>
+                  <div className={cls("flex justify-center")}>
+                    <button
+                      className={cls(
+                        "font-medium text-sm border-b-2 border-transparent hover:text-gray-400 text-gray-500"
+                      )}
+                    >
+                      Submit
+                    </button>
+                    {isEdit ? (
+                      <button
+                        className={cls(
+                          "font-medium text-sm border-b-2 ml-3 border-transparent hover:text-gray-400 text-gray-500"
+                        )}
+                        onClick={() => handleCancel()}
+                      >
+                        Cancel
+                      </button>
+                    ) : null}
+                  </div>
                 </form>
               </div>
             </div>

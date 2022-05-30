@@ -181,7 +181,7 @@ async function handler(
 }
 
 export default withHandler({
-  methods: ["GET", "POST", "DELETE"],
+  methods: ["GET", "POST", "DELETE", "PUT"],
   handler,
   isPrivate: false,
 });

@@ -282,3 +282,442 @@ Update this package.json to use a subpath pattern like "./*".
 26-02-2022 17:42:13.856: event - compiled client and server successfully in 1412 ms (436 modules)
 26-02-2022 17:47:45.558: wait  - compiling...
 26-02-2022 17:47:46.014: event - compiled client and server successfully in 452 ms (411 modules)
+26-02-2022 17:49:56.631: wait  - compiling /api/ips...
+26-02-2022 17:49:57.122: event - compiled client and server successfully in 490 ms (424 modules)
+26-02-2022 17:50:37.626: wait  - compiling...
+26-02-2022 17:50:42.131: event - compiled successfully in 4.5s (381 modules)
+26-02-2022 17:58:59.700: wait  - compiling / (client and server)...
+26-02-2022 17:59:01.138: event - compiled client and server successfully in 1437 ms (436 modules)
+26-02-2022 17:59:03.354: wait  - compiling /_error (client and server)...
+26-02-2022 17:59:03.573: event - compiled client and server successfully in 218 ms (437 modules)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+Error: Cannot find module './NODE_ENV=production'
+Require stack:
+- /home/aiden/ipmon/imaginaryUncacheableRequireResolveScript
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.resolve (node:internal/modules/cjs/helpers:108:19)
+    at requireResolveNonCached (/usr/lib/node_modules/ts-node/dist/bin.js:375:16)
+    at getProjectSearchDir (/usr/lib/node_modules/ts-node/dist/bin.js:345:40)
+    at main (/usr/lib/node_modules/ts-node/dist/bin.js:220:27)
+    at Object.<anonymous> (/usr/lib/node_modules/ts-node/dist/bin.js:405:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+26-02-2022 20:50:21.810: info  - Loaded env from /home/aiden/ipmon/.env
+26-02-2022 20:50:23.395: info  - Disabled SWC as replacement for Babel because of custom Babel configuration ".babelrc" https://nextjs.org/docs/messages/swc-disabled
+26-02-2022 20:50:23.424: (node:390801) [DEP0148] DeprecationWarning: Use of deprecated folder mapping "./" in the "exports" field module resolution of the package at /home/aiden/ipmon/node_modules/react/package.json.
+Update this package.json to use a subpath pattern like "./*".
+(Use `node --trace-deprecation ...` to show where the warning was created)
+26-02-2022 20:50:25.253: event - compiled client and server successfully in 1743 ms (155 modules)
+26-02-2022 20:50:25.626: > Server listening at http://localhost:3000 as development
+26-02-2022 20:50:25.682: wait  - compiling / (client and server)...
+26-02-2022 20:50:26.617: event - compiled client and server successfully in 932 ms (423 modules)
+26-02-2022 20:50:28.157: wait  - compiling /api/ips...
+26-02-2022 20:50:28.534: event - compiled client and server successfully in 377 ms (436 modules)
+26-02-2022 21:00:13.112: wait  - compiling /_error (client and server)...
+26-02-2022 21:00:13.477: event - compiled client and server successfully in 363 ms (425 modules)
+26-02-2022 21:00:16.195: wait  - compiling / (client and server)...
+26-02-2022 21:00:16.393: event - compiled client and server successfully in 197 ms (437 modules)
