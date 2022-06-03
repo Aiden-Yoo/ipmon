@@ -13,6 +13,7 @@ import Input from "@components/input";
 import useMutation from "@libs/client/useMutation";
 import useSWR, { SWRConfig } from "swr";
 import { IpPool } from "@prisma/client";
+import Select from "@components/select";
 
 interface SubmitForm {
   ip: string;
@@ -36,7 +37,8 @@ interface GetPool {
   group: string;
   purpose: string | null;
   use: boolean | null;
-  updateAt: string;
+  checkAt: string;
+  changeAt: string;
 }
 
 interface GetSummary {
@@ -58,6 +60,11 @@ const Home: NextPage = () => {
   const [ip, setIp] = useState<string>();
   const [ipData, setIpData] = useState<GetPool[]>([]);
   const [summaryData, setSummaryData] = useState<GetSummary[]>([]);
+  const [canDelete, setCanDelete] = useState<string>("");
+  const [pageState, setPageState] = useState<number>(0);
+  const [categoryState, setCategoryState] = useState<string>("");
+  const [options, setOptions] = useState<string[]>([]);
+  const [isSelect, setIsSelect] = useState<boolean>(true);
   const {
     register,
     handleSubmit,
@@ -92,6 +99,16 @@ const Home: NextPage = () => {
   const handleCancel = () => {
     setIsEdit(false);
   };
+  const handleAddString = (e: any) => {
+    e.preventDefault();
+    setCanDelete(canDelete + e.target.innerText);
+  };
+  const handleClear = (e: any) => {
+    e.preventDefault();
+    if (e.target.innerText === "C") {
+      setCanDelete("");
+    }
+  };
 
   useEffect(() => {
     if (mutateData) {
@@ -101,17 +118,21 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     if (data) {
+      let makeOptions: string[] = [];
       const getPool = data.ipPools.map((pool) => {
+        if (!makeOptions.includes(pool.group)) makeOptions.push(pool.group);
         return {
           id: pool.id,
           ip: pool.ip,
           group: pool.group,
           purpose: pool.purpose,
           use: pool.use,
-          updateAt: moment(pool.updateAt).format("YY-MM-DD HH:mm"),
+          checkAt: moment(pool.checkAt).format("YY-MM-DD HH:mm"),
+          changeAt: moment(pool.changeAt).format("YY-MM-DD HH:mm"),
         };
       });
       setIpData(getPool);
+      setOptions(makeOptions);
       setSummaryData(data.summary);
     }
   }, [data]);
@@ -121,7 +142,8 @@ const Home: NextPage = () => {
       {
         Header: "Category",
         accessor: "group",
-        Filter: SelectColumnFilter,
+        // Filter: SelectColumnFilter,
+        Filter: (column: any) => SelectColumnFilter(column, setCategoryState),
       },
       {
         Header: "IP",
@@ -138,25 +160,34 @@ const Home: NextPage = () => {
         Cell: StatusPill,
       },
       {
-        Header: "Last Updated",
-        accessor: "updateAt",
+        Header: "Last Checked",
+        accessor: "checkAt",
+        filter: "includes",
+      },
+      {
+        Header: "Last Changed",
+        accessor: "changeAt",
         filter: "includes",
       },
       {
         Header: "Operation",
         Cell: (row: any) => (
           <div>
-            <button
-              className={cls(
-                `font-medium text-sm border-b-2 mr-2 border-transparent   ${
-                  isEdit ? `text-gray-200` : `hover:text-gray-400 text-gray-500`
-                }`
-              )}
-              onClick={() => handleDelete(row)}
-              disabled={isEdit}
-            >
-              Delete
-            </button>
+            {canDelete === "MON" && (
+              <button
+                className={cls(
+                  `font-medium text-sm border-b-2 mr-2 border-transparent   ${
+                    isEdit
+                      ? `text-gray-200`
+                      : `hover:text-gray-400 text-gray-500`
+                  }`
+                )}
+                onClick={() => handleDelete(row)}
+                disabled={isEdit}
+              >
+                Delete
+              </button>
+            )}
             <button
               className={cls(
                 `font-medium text-sm border-b-2 mr-2 border-transparent   ${
@@ -172,7 +203,7 @@ const Home: NextPage = () => {
         ),
       },
     ],
-    [isEdit]
+    [isEdit, canDelete]
   );
   const summaryColumns = useMemo(
     () => [
@@ -190,13 +221,47 @@ const Home: NextPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 text-gray-900">
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
-        <h1 className="text-xl font-semibold">IPMON - CS</h1>
+      <main className="min-w-fit mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+        <h1 className="text-xl font-semibold">
+          IP
+          <span
+            className="cursor-default"
+            onClick={(event) => handleAddString(event)}
+          >
+            M
+          </span>
+          <span
+            className="cursor-default"
+            onClick={(event) => handleAddString(event)}
+          >
+            O
+          </span>
+          <span
+            className="cursor-default"
+            onClick={(event) => handleAddString(event)}
+          >
+            N
+          </span>
+          {" - "}
+          <span
+            className="cursor-default"
+            onClick={(event) => handleClear(event)}
+          >
+            C
+          </span>
+          S
+        </h1>
         <div className="flex justify-center">
           <div className="mt-6 mr-6">
-            <Table columns={columns} data={ipData} />
+            <Table
+              columns={columns}
+              data={ipData}
+              pageState={pageState}
+              setPageState={setPageState}
+              categoryState={categoryState}
+            />
           </div>
-          <div className="mt-11 max-w-sm">
+          <div className="mt-11 min-w-fit">
             <div>
               <h2 className="text-sm font-semibold">by Category</h2>
               <SummaryTable columns={summaryColumns} data={summaryData} />
@@ -204,6 +269,14 @@ const Home: NextPage = () => {
             <div className="mt-6">
               <h2 className="text-sm font-semibold">Add IP</h2>
               <div className="mt-4 py-6 align-middle inline-block min-w-full px-6 shadow overflow-hidden border-b rounded-lg bg-white">
+                <div className="text-xs text-right font-medium text-gray-700">
+                  New{" "}
+                  <input
+                    type="checkbox"
+                    className="appearance-none border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-500 focus:border-gray-500 text-gray-500"
+                    onChange={() => setIsSelect(!isSelect)}
+                  />
+                </div>
                 <form
                   onSubmit={
                     !isEdit
@@ -212,24 +285,45 @@ const Home: NextPage = () => {
                   }
                   className="flex flex-col space-y-4"
                 >
-                  <Input
-                    register={
-                      !isEdit
-                        ? register("group", {
-                            required: "Need to input Category",
-                          })
-                        : register("group", {
-                            required: false,
-                            value: category,
-                          })
-                    }
-                    name="group"
-                    label="Category"
-                    type="text"
-                    required={!isEdit!}
-                    disabled={isEdit}
-                    value={isEdit ? category : undefined}
-                  />
+                  {isSelect ? (
+                    <Select
+                      register={
+                        !isEdit
+                          ? register("group", {
+                              required: "Need to input Category",
+                            })
+                          : register("group", {
+                              required: false,
+                              value: category,
+                            })
+                      }
+                      name="group"
+                      label="Category"
+                      required={!isEdit!}
+                      disabled={isEdit}
+                      value={isEdit ? category : undefined}
+                      options={options}
+                    />
+                  ) : (
+                    <Input
+                      register={
+                        !isEdit
+                          ? register("group", {
+                              required: "Need to input Category",
+                            })
+                          : register("group", {
+                              required: false,
+                              value: category,
+                            })
+                      }
+                      name="group"
+                      label="Category"
+                      type="text"
+                      required={!isEdit!}
+                      disabled={isEdit}
+                      value={isEdit ? category : undefined}
+                    />
+                  )}
                   {errors.group?.message}
                   <Input
                     register={

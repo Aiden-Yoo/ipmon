@@ -48,9 +48,10 @@ function GlobalFilter({
   );
 }
 
-export function SelectColumnFilter({
-  column: { filterValue, setFilter, preFilteredRows, id, render },
-}: any) {
+export function SelectColumnFilter(
+  { column: { filterValue, setFilter, preFilteredRows, id, render } }: any,
+  setCategoryState: any
+) {
   const options = useMemo(() => {
     const options: any = new Set();
     preFilteredRows.map((row: any) => {
@@ -58,7 +59,6 @@ export function SelectColumnFilter({
     });
     return [...options.values()];
   }, [id, preFilteredRows]);
-
   return (
     <label className="flex gap-x-2 items-baseline">
       <span className="text-gray-700">{render("Header")}: </span>
@@ -69,6 +69,7 @@ export function SelectColumnFilter({
         value={filterValue}
         onChange={(e) => {
           setFilter(e.target.value || undefined);
+          setCategoryState(e.target.value);
         }}
       >
         <option value="">All</option>
@@ -101,7 +102,13 @@ export function StatusPill({ value }: any) {
   );
 }
 
-export default function Table({ columns, data }: any) {
+export default function Table({
+  columns,
+  data,
+  pageState,
+  setPageState,
+  categoryState,
+}: any) {
   const {
     getTableProps,
     getTableBodyProps,
@@ -124,8 +131,12 @@ export default function Table({ columns, data }: any) {
     {
       columns,
       data,
-      //@ts-ignore
-      initialState: { pageSize: 25 },
+      initialState: {
+        //@ts-ignore
+        pageSize: 25,
+        pageIndex: pageState,
+        filters: [{ id: "group", value: categoryState }],
+      },
     },
     useFilters,
     useGlobalFilter,
@@ -233,14 +244,20 @@ export default function Table({ columns, data }: any) {
         <div className="flex-1 flex justify-between sm:hidden">
           <Button
             className=""
-            onClick={() => previousPage()}
+            onClick={() => {
+              setPageState(pageState - 1);
+              previousPage();
+            }}
             disabled={!canPreviousPage}
           >
             Previous
           </Button>
           <Button
             className=""
-            onClick={() => nextPage()}
+            onClick={() => {
+              setPageState(pageState + 1);
+              nextPage();
+            }}
             disabled={!canNextPage}
           >
             Next
@@ -261,7 +278,7 @@ export default function Table({ columns, data }: any) {
                   setPageSize(Number(e.target.value));
                 }}
               >
-                {[25, 50, 100].map((pageSize) => (
+                {[25, 50, 100, 300].map((pageSize) => (
                   <option key={pageSize} value={pageSize}>
                     Show {pageSize}
                   </option>
@@ -276,7 +293,10 @@ export default function Table({ columns, data }: any) {
             >
               <PageButton
                 className="rounded-l-md"
-                onClick={() => gotoPage(0)}
+                onClick={() => {
+                  setPageState(0);
+                  gotoPage(0);
+                }}
                 disabled={!canPreviousPage}
               >
                 <span className="sr-only">First</span>
@@ -287,7 +307,10 @@ export default function Table({ columns, data }: any) {
               </PageButton>
               <PageButton
                 className=""
-                onClick={() => previousPage()}
+                onClick={() => {
+                  setPageState(pageState - 1);
+                  previousPage();
+                }}
                 disabled={!canPreviousPage}
               >
                 <span className="sr-only">Previous</span>
@@ -298,7 +321,10 @@ export default function Table({ columns, data }: any) {
               </PageButton>
               <PageButton
                 className=""
-                onClick={() => nextPage()}
+                onClick={() => {
+                  setPageState(pageState + 1);
+                  nextPage();
+                }}
                 disabled={!canNextPage}
               >
                 <span className="sr-only">Next</span>
@@ -309,7 +335,10 @@ export default function Table({ columns, data }: any) {
               </PageButton>
               <PageButton
                 className="rounded-r-md"
-                onClick={() => gotoPage(pageCount - 1)}
+                onClick={() => {
+                  setPageState(pageCount - 1);
+                  gotoPage(pageCount - 1);
+                }}
                 disabled={!canNextPage}
               >
                 <span className="sr-only">Last</span>

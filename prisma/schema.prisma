@@ -21,4 +21,6 @@ model IpPool {
   use Boolean? @default(false)
   createAt DateTime @default(now())
   updateAt DateTime @updatedAt
+  checkAt  DateTime @default(now())
+  changeAt DateTime @default(now())
 }

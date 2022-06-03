@@ -6,6 +6,7 @@ import ping from "ping";
 //@ts-ignore
 import arpScanner from "arpscan";
 import client from "./libs/server/client";
+import moment, { now } from "moment";
 
 const port = parseInt(process.env.PORT || "3000", 10);
 const dev = process.env.NODE_ENV !== "production";
@@ -44,6 +45,11 @@ const arpJob = new CronJob(
               },
               data: {
                 use: prev?.use === false ? true : undefined,
+                checkAt: moment(now()).format("YY-MM-DD HH:mm"),
+                changeAt:
+                  prev?.use === false
+                    ? moment(now()).format("YY-MM-DD HH:mm")
+                    : undefined,
               },
             }));
         });
@@ -89,6 +95,11 @@ const pingJob = new CronJob(
             },
             data: {
               use: prev?.use === false ? true : undefined,
+              checkAt: moment(now()).format("YY-MM-DD HH:mm"),
+              changeAt:
+                prev?.use === false
+                  ? moment(now()).format("YY-MM-DD HH:mm")
+                  : undefined,
             },
           });
         }
@@ -101,6 +112,11 @@ const pingJob = new CronJob(
               },
               data: {
                 use: prev?.use === true ? false : undefined,
+                checkAt: moment(now()).format("YY-MM-DD HH:mm"),
+                changeAt:
+                  prev?.use === true
+                    ? moment(now()).format("YY-MM-DD HH:mm")
+                    : undefined,
               },
             });
           }
