@@ -6,7 +6,7 @@ import ping from "ping";
 //@ts-ignore
 import arpScanner from "arpscan";
 import client from "./libs/server/client";
-import moment, { now } from "moment";
+import moment from "moment";
 
 const port = parseInt(process.env.PORT || "3000", 10);
 const dev = process.env.NODE_ENV !== "production";
@@ -32,26 +32,34 @@ const arpJob = new CronJob(
     try {
       await arpScanner((err: any, data: any) => {
         if (err) throw err;
+        const now = new Date().getTime();
         arpResults = data.map((result: any) => result.ip);
-
         arpResults.map(async (ip) => {
           const prev = await client.ipPool.findFirst({
             where: { ip },
           });
-          prev &&
-            (await client.ipPool.update({
+          if (prev?.use === false) {
+            await client.ipPool.update({
               where: {
                 ip,
               },
               data: {
-                use: prev?.use === false ? true : undefined,
-                checkAt: moment(now()).format("YY-MM-DD HH:mm"),
-                changeAt:
-                  prev?.use === false
-                    ? moment(now()).format("YY-MM-DD HH:mm")
-                    : undefined,
+                use: true,
+                checkAt: moment(now).toDate(),
+                changeAt: moment(now).toDate(),
               },
-            }));
+            });
+          }
+          if (prev?.use === true) {
+            await client.ipPool.update({
+              where: {
+                ip,
+              },
+              data: {
+                checkAt: moment(now).toDate(),
+              },
+            });
+          }
         });
       }, options);
     } catch (error) {
@@ -64,9 +72,10 @@ const arpJob = new CronJob(
 );
 
 const pingJob = new CronJob(
-  "* */5 * * *",
+  "*/5 * * * *",
   async () => {
     try {
+      const now = new Date().getTime();
       const hosts = await client.ipPool.findMany({
         orderBy: [
           {
@@ -89,36 +98,54 @@ const pingJob = new CronJob(
           },
         });
         if (res.alive) {
-          await client.ipPool.update({
-            where: {
-              ip: host.ip,
-            },
-            data: {
-              use: prev?.use === false ? true : undefined,
-              checkAt: moment(now()).format("YY-MM-DD HH:mm"),
-              changeAt:
-                prev?.use === false
-                  ? moment(now()).format("YY-MM-DD HH:mm")
-                  : undefined,
-            },
-          });
-        }
-        if (!res.alive) {
-          const isInclude = arpResults.includes(host.ip);
-          if (!isInclude) {
+          if (prev?.use === false) {
             await client.ipPool.update({
               where: {
                 ip: host.ip,
               },
               data: {
-                use: prev?.use === true ? false : undefined,
-                checkAt: moment(now()).format("YY-MM-DD HH:mm"),
-                changeAt:
-                  prev?.use === true
-                    ? moment(now()).format("YY-MM-DD HH:mm")
-                    : undefined,
+                use: true,
+                checkAt: moment(now).toDate(),
+                changeAt: moment(now).toDate(),
               },
             });
+          }
+          if (prev?.use === true) {
+            await client.ipPool.update({
+              where: {
+                ip: host.ip,
+              },
+              data: {
+                checkAt: moment(now).toDate(),
+              },
+            });
+          }
+        }
+        if (!res.alive) {
+          const isInclude = arpResults.includes(host.ip);
+          if (!isInclude) {
+            if (prev?.use === true) {
+              await client.ipPool.update({
+                where: {
+                  ip: host.ip,
+                },
+                data: {
+                  use: false,
+                  checkAt: moment(now).toDate(),
+                  changeAt: moment(now).toDate(),
+                },
+              });
+            }
+            if (prev?.use === false) {
+              await client.ipPool.update({
+                where: {
+                  ip: host.ip,
+                },
+                data: {
+                  checkAt: moment(now).toDate(),
+                },
+              });
+            }
           }
         }
       }
